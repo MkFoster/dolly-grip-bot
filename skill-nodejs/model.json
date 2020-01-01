@@ -1,0 +1,173 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "dolly bot",
+            "intents": [{
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SetSpeedIntent",
+                    "slots": [{
+                        "name": "Speed",
+                        "type": "AMAZON.NUMBER"
+                    }],
+                    "samples": [
+                        "set speed {Speed} percent",
+                        "set {Speed} percent speed",
+                        "set speed to {Speed} percent"
+                    ]
+                },
+                {
+                    "name": "SetCameraPitchIntent",
+                    "slots": [{
+                            "name": "Direction",
+                            "type": "DirectionType"
+                        },
+                        {
+                            "name": "Angle",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "tilt the camera {Direction} {Angle} degrees",
+                        "pitch camera {Direction} {Angle} degrees",
+                        "pitch camera {Direction} {Angle}",
+                        " set camera pitch {Direction} {Angle} degrees",
+                        " set camera pitch {Direction}",
+                        "pitch camera {Direction}",
+                        "pitch",
+                        "pitch camera"
+                    ]
+                },
+                {
+                    "name": "SetCameraPositionIntent",
+                    "slots": [{
+                            "name": "Position",
+                            "type": "Position"
+                        },
+                        {
+                            "name": "Direction",
+                            "type": "DirectionType"
+                        }
+                    ],
+                    "samples": [
+                        "move the camera",
+                        "move the camera {Direction} to {Position}",
+                        "move {Direction} to {Position}",
+                        "move {Direction}",
+                        "move the camera to {Position}",
+                        "move the camera to position {Position}",
+                        "goto {Position}",
+                        "move to position {Position}",
+                        "goto position {Position}",
+                        "position {Position}",
+                        "set camera position to {Position}",
+                        "set camera position"
+                    ]
+                }
+            ],
+            "types": [{
+                    "name": "DirectionType",
+                    "values": [{
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "brake"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go backward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go forward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "backwards"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "backward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forwards"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Position",
+                    "values": [{
+                            "name": {
+                                "value": "White"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brown"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Red"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yellow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Green"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Black"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

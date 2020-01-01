@@ -115,7 +115,7 @@ class MindstormsGadget(AlexaGadget):
         :param is_blocking: if set, motor run until duration expired before accepting another command
         """
         print("Pitch: ({}, {}, {})".format(direction, angle, is_blocking), file=sys.stderr)
-        rotations = angle * .13
+        rotations = angle * .06
         print("Rotations: " + str(rotations), file=sys.stderr)
         if direction in Direction.UP.value:
             self.mediumMotor.on_for_rotations(SpeedPercent(100), rotations, False, block=is_blocking)
